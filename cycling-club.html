@@ -1,0 +1,373 @@
+<!-- This tells the browser that this file uses HTML5 -->
+<!DOCTYPE html>
+
+<!-- This is the main root of the whole page, and the page language is English -->
+<html lang="en">
+<head>
+  <!-- This sets the text encoding so letters and symbols display properly -->
+  <meta charset="UTF-8">
+
+  <!-- This helps the page scale correctly on phones, tablets and laptops -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- This is the page title shown in the browser tab -->
+  <title>Cycling Club - Student Hub</title>
+
+  <!-- This connects early to Google Fonts to help the font load faster -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- This connects to the second Google Fonts server -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- This imports the Inter font in different font weights -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- This links the main CSS file for all the page styling -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- This links the JavaScript file, and defer means it runs after the HTML loads -->
+  <script src="script.js" defer></script>
+
+  <!-- This adds the small icon shown in the browser tab -->
+  <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
+</head>
+
+<!-- Everything inside body is the visible page content -->
+<body>
+  <!-- This is the top section of the page with the logo and menu -->
+  <header class="site-header">
+    <!-- This keeps the content centred and stops it stretching too wide -->
+    <div class="container">
+      <!-- This is the navigation bar -->
+      <nav class="nav">
+        <!-- This is the logo area, and it links back to the homepage -->
+        <a class="brand" href="index.html" aria-label="Student Hub home">
+          <!-- This is the logo image -->
+          <img class="brand-logo" src="images/student-hub-logo-header.png" alt="Student Hub logo">
+
+          <!-- This is the website name shown next to the logo -->
+          <span class="brand-text">Student Hub</span>
+        </a>
+
+        <!-- This is the mobile menu button -->
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <!-- First line of the burger menu icon -->
+          <span></span>
+
+          <!-- Second line of the burger menu icon -->
+          <span></span>
+
+          <!-- Third line of the burger menu icon -->
+          <span></span>
+        </button>
+
+        <!-- These are the navigation links -->
+        <div class="nav-links" id="site-nav">
+          <!-- Link to the homepage -->
+          <a href="index.html">Home</a>
+
+          <!-- Link to the clubs page -->
+          <a href="clubs.html">Clubs</a>
+
+          <!-- Link to the student deals page -->
+          <a href="student-deals.html">Student Deals</a>
+
+          <!-- Link to the contact page -->
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- This is the main content area of the page -->
+  <main class="container">
+    <!-- This is the hero section at the top of the Cycling Club page -->
+    <section class="hero">
+      <!-- This creates a layout with text on one side and an image on the other -->
+      <div class="hero-grid">
+        <!-- This is the text side of the hero section -->
+        <div class="hero-copy">
+          <!-- Small label above the main heading -->
+          <span class="eyebrow">Active club</span>
+
+          <!-- Main heading of the page -->
+          <h1>Cycling Club</h1>
+
+          <!-- Short intro text explaining the club -->
+          <p>
+            Cycling Club is a social and active space where students can enjoy group rides,
+            outdoor wellbeing and a shared interest in movement, confidence and community.
+          </p>
+
+          <!-- These are the main action buttons in the hero section -->
+          <div class="hero-actions">
+            <!-- Button that takes the user to the contact page -->
+            <a class="button" href="contact.html">Join this club</a>
+
+            <!-- Button that takes the user back to the clubs page -->
+            <a class="button button-secondary" href="clubs.html">Back to clubs</a>
+          </div>
+        </div>
+
+        <!-- This is the hero image shown on the right side -->
+        <div class="hero-card hero-main-card">
+          <!-- Main image for the Cycling Club page -->
+          <img src="images/cycling-club.jpg" alt="Students meeting with bicycles during a Cycling Club session">
+        </div>
+      </div>
+    </section>
+
+    <!-- This section shows the main club information -->
+    <section class="section">
+      <div class="card">
+        <div class="card-body">
+          <!-- Small label above the heading -->
+          <span class="eyebrow">Club information</span>
+
+          <!-- Main heading for this card -->
+          <h2>Session details</h2>
+
+          <!-- Meeting time -->
+          <p><strong>Meeting time:</strong> Fridays, 2:30 PM</p>
+
+          <!-- Club location -->
+          <p><strong>Location:</strong> Front Entrance Cycle Rack</p>
+
+          <!-- Club email -->
+          <p><strong>Email:</strong> cycling@studenthub.ac.uk</p>
+
+          <!-- Short summary of what students can expect -->
+          <p>
+            <strong>What to expect:</strong> Social rides, route planning, outdoor activity
+            and a supportive group environment that helps students stay active.
+          </p>
+
+          <!-- These are extra social and student support links -->
+          <div class="social top-gap-12">
+            <a href="https://www.nclanarkshire.ac.uk/for-applicants/student-support-and-resources/students-association/" target="_blank" rel="noopener noreferrer">Students' Association</a>
+            <a href="https://www.facebook.com/NCLanarkshire/" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.instagram.com/nclanarkshire/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://x.com/NCLanarkshire" target="_blank" rel="noopener noreferrer">X</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- This section explains more about the club and who it is for -->
+    <section class="section split">
+      <!-- First card with more details about the club -->
+      <div class="card">
+        <div class="card-body">
+          <!-- Small label above the heading -->
+          <span class="eyebrow">About the club</span>
+
+          <!-- Main heading -->
+          <h2>Outdoor activity with a social feel</h2>
+
+          <!-- First paragraph about club activities -->
+          <p>
+            Cycling Club gives students a practical way to enjoy exercise outside the classroom.
+            Sessions can include local rides, simple route planning and opportunities to build confidence
+            through regular outdoor activity.
+          </p>
+
+          <!-- Second paragraph about the club atmosphere -->
+          <p>
+            The club is designed to feel welcoming rather than intimidating, so students can take part
+            at their own pace and enjoy the social side of being active.
+          </p>
+        </div>
+      </div>
+
+      <!-- Second card explaining who the club suits -->
+      <div class="card">
+        <div class="card-body">
+          <!-- Small label above the heading -->
+          <span class="eyebrow">Who it suits</span>
+
+          <!-- Main heading -->
+          <h2>For active and outdoors-minded students</h2>
+
+          <!-- First paragraph about who can join -->
+          <p>
+            This club suits students who enjoy fresh air, movement and meeting people through shared activity.
+            It works well for students who want a more relaxed alternative to indoor clubs.
+          </p>
+
+          <!-- Second paragraph about the type of students it may suit -->
+          <p>
+            It can appeal to both confident riders and those who simply want a more social way
+            to improve fitness, routine and wellbeing.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- This section shows another image and explains the club atmosphere -->
+    <section class="section">
+      <div class="media-grid">
+        <!-- This is the image side of the section -->
+        <div class="media-box">
+          <img src="images/cycling-club-poster.jpg" alt="Students taking part in a fast-paced Cycling Club ride">
+        </div>
+
+        <!-- This is the text side of the section -->
+        <div class="media-copy">
+          <!-- Small label above the heading -->
+          <span class="eyebrow">Club energy</span>
+
+          <!-- Main heading -->
+          <h2>From casual rides to active challenges</h2>
+
+          <!-- First paragraph about the club atmosphere -->
+          <p>
+            While many sessions are social and steady, Cycling Club can also bring a stronger sense of pace,
+            motivation and shared challenge. Group riding helps students build confidence and enjoy the energy
+            of moving together.
+          </p>
+
+          <!-- Second paragraph about why students join -->
+          <p>
+            For some students, that means staying active more consistently. For others, it means enjoying
+            the excitement of speed, focus and momentum in a supportive group setting.
+          </p>
+
+          <!-- Button linking to the contact page -->
+          <a class="button top-gap-12" href="contact.html">Ask about joining</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- This section shows activities and how to get involved -->
+    <section class="section split">
+      <!-- First card with example activities -->
+      <div class="card">
+        <div class="card-body">
+          <!-- Small label above the heading -->
+          <span class="eyebrow">Activities</span>
+
+          <!-- Main heading -->
+          <h2>What students might do</h2>
+
+          <!-- List of possible club activities -->
+          <ul class="clean-list">
+            <li>Join short social rides with other students.</li>
+            <li>Explore local routes and outdoor spaces.</li>
+            <li>Build confidence through regular group cycling.</li>
+            <li>Enjoy movement, challenge and a healthier routine.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Second card with joining information -->
+      <div class="card">
+        <div class="card-body">
+          <!-- Small label above the heading -->
+          <span class="eyebrow">Getting involved</span>
+
+          <!-- Main heading -->
+          <h2>How to take part</h2>
+
+          <!-- Short explanation text -->
+          <p>
+            Use the contact page to ask about joining, session times and participation details.
+            You can also visit the Students’ Association page to stay connected with wider student life.
+          </p>
+
+          <!-- Buttons for joining and official contact -->
+          <div class="hero-actions top-gap-12">
+            <a class="button" href="contact.html">Send an enquiry</a>
+            <a class="button button-secondary" href="https://www.nclanarkshire.ac.uk/corporate/contact-us/" target="_blank" rel="noopener noreferrer">Official contact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- This section explains why students might join -->
+    <section class="section">
+      <!-- Heading area for the section -->
+      <div class="section-heading">
+        <!-- Small label above the heading -->
+        <span class="eyebrow">Why students join</span>
+
+        <!-- Main heading -->
+        <h2>Reasons to get involved</h2>
+
+        <!-- Short intro text -->
+        <p>
+          Cycling Club combines social connection, outdoor activity and a simple way to stay motivated.
+        </p>
+      </div>
+
+      <!-- This row holds the three reason cards -->
+      <div class="cards-row">
+        <!-- First reason card -->
+        <article class="card">
+          <div class="card-body">
+            <h3>Fresh air</h3>
+            <p>Spend time outdoors and enjoy a break from indoor study spaces and routines.</p>
+          </div>
+        </article>
+
+        <!-- Second reason card -->
+        <article class="card">
+          <div class="card-body">
+            <h3>Regular movement</h3>
+            <p>Build a more active week through social rides and steady physical activity.</p>
+          </div>
+        </article>
+
+        <!-- Third reason card -->
+        <article class="card">
+          <div class="card-body">
+            <h3>Shared motivation</h3>
+            <p>Ride with others, stay encouraged and enjoy the social side of fitness and challenge.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- This is the final call-to-action section -->
+    <section class="section">
+      <div class="card">
+        <div class="card-body">
+          <!-- Small label above the heading -->
+          <span class="eyebrow">Next step</span>
+
+          <!-- Main heading -->
+          <h2>Interested in joining?</h2>
+
+          <!-- Final message for the user -->
+          <p>
+            If Cycling Club sounds like a good fit, send an enquiry through the contact page and mention the club name.
+          </p>
+
+          <!-- Final action buttons -->
+          <div class="hero-actions top-gap-12">
+            <a class="button" href="contact.html">Go to contact page</a>
+            <a class="button button-secondary" href="clubs.html">View all clubs</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- This is the footer at the bottom of the page -->
+  <footer class="footer">
+    <!-- Container keeps the footer content aligned with the rest of the page -->
+    <div class="container">
+      <!-- Short footer text about the website -->
+      <p>Student Hub — a modern college clubs website concept.</p>
+
+      <!-- Copyright text -->
+      <p>&copy; 2026 Student Hub. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

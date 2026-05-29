@@ -1,0 +1,191 @@
+<!-- This tells the browser that this file uses HTML5 -->
+<!DOCTYPE html>
+
+<!-- This is the main root of the whole page, and the page language is English -->
+<html lang="en">
+<head>
+  <!-- This sets the text encoding so letters and symbols display properly -->
+  <meta charset="UTF-8">
+
+  <!-- This helps the page scale correctly on phones, tablets and laptops -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- This is the page title shown in the browser tab -->
+  <title>Thank You - Student Hub</title>
+
+  <!-- This connects early to Google Fonts to help the font load faster -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- This connects to the second Google Fonts server -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- This imports the Inter font in different font weights -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- This links the main CSS file for all the page styling -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- This links the JavaScript file, and defer means it runs after the HTML loads -->
+  <script src="script.js" defer></script>
+
+  <!-- This adds the small icon shown in the browser tab -->
+  <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
+</head>
+
+<!-- Everything inside body is the visible page content -->
+<body>
+  <!-- This is the top section of the page with the logo and menu -->
+  <header class="site-header">
+    <!-- This keeps the content centred and stops it stretching too wide -->
+    <div class="container">
+      <!-- This is the navigation bar -->
+      <nav class="nav">
+        <!-- This is the logo area, and it links back to the homepage -->
+        <a class="brand" href="index.html" aria-label="Student Hub home">
+          <!-- This is the logo image -->
+          <img class="brand-logo" src="images/student-hub-logo-header.png" alt="Student Hub logo">
+
+          <!-- This is the website name shown next to the logo -->
+          <span class="brand-text">Student Hub</span>
+        </a>
+
+        <!-- This is the mobile menu button -->
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <!-- First line of the burger menu icon -->
+          <span></span>
+
+          <!-- Second line of the burger menu icon -->
+          <span></span>
+
+          <!-- Third line of the burger menu icon -->
+          <span></span>
+        </button>
+
+        <!-- These are the navigation links -->
+        <div class="nav-links" id="site-nav">
+          <!-- Link to the homepage -->
+          <a href="index.html">Home</a>
+
+          <!-- Link to the clubs page -->
+          <a href="clubs.html">Clubs</a>
+
+          <!-- Link to the student deals page -->
+          <a href="student-deals.html">Student Deals</a>
+
+          <!-- Link to the contact page -->
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- This is the main content area of the page -->
+  <main class="container">
+    <!-- This is the hero section at the top of the thank you page -->
+    <section class="hero">
+      <!-- This creates a layout with text on one side and a card on the other -->
+      <div class="hero-grid">
+        <!-- This is the text side of the hero section -->
+        <div class="hero-copy">
+          <!-- Small label above the main heading -->
+          <span class="eyebrow">Enquiry sent</span>
+
+          <!-- Main heading of the page -->
+          <h1>Thank you for your message.</h1>
+
+          <!-- Short message confirming the enquiry was sent -->
+          <p>
+            Your enquiry has been sent successfully. A member of the team can now review your message.
+          </p>
+
+          <!-- These are the main action buttons in the hero section -->
+          <div class="hero-actions">
+            <!-- Button that takes the user to the clubs page -->
+            <a class="button" href="clubs.html">Browse clubs</a>
+
+            <!-- Button that takes the user back to the homepage -->
+            <a class="button button-secondary" href="index.html">Back to home</a>
+          </div>
+        </div>
+
+        <!-- This card gives a quick message about what happens next -->
+        <div class="card">
+          <div class="card-body">
+            <!-- Main heading for the card -->
+            <h2>What happens next?</h2>
+
+            <!-- Short follow-up message -->
+            <p>Keep an eye on your email for a reply or follow-up information.</p>
+
+            <!-- Extra message with next steps -->
+            <p>You can continue exploring clubs, student deals and official college resources while you wait.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- This section gives the user two next-step options -->
+    <section class="section split">
+      <!-- First card for going back to clubs -->
+      <div class="card">
+        <div class="card-body">
+          <!-- Small label above the heading -->
+          <span class="eyebrow">Next step</span>
+
+          <!-- Main heading -->
+          <h2>Explore clubs</h2>
+
+          <!-- Short explanation text -->
+          <p>
+            Go back to the clubs directory to compare activities, interests and student communities.
+          </p>
+
+          <!-- Button linking to the clubs page -->
+          <a class="button top-gap-12" href="clubs.html">View clubs</a>
+        </div>
+      </div>
+
+      <!-- Second card with official support links -->
+      <div class="card">
+        <div class="card-body">
+          <!-- Small label above the heading -->
+          <span class="eyebrow">Need more help?</span>
+
+          <!-- Main heading -->
+          <h2>Official contact links</h2>
+
+          <!-- Short explanation text -->
+          <p>
+            Use the official college website for more support, contact details and student services.
+          </p>
+
+          <!-- These are the official support links -->
+          <div class="social">
+            <a href="https://www.nclanarkshire.ac.uk/corporate/contact-us/" target="_blank" rel="noopener noreferrer">Contact us</a>
+            <a href="https://www.nclanarkshire.ac.uk/locations-and-facilities/" target="_blank" rel="noopener noreferrer">Campuses</a>
+            <a href="https://www.nclanarkshire.ac.uk/for-applicants/student-support-and-resources/students-association/" target="_blank" rel="noopener noreferrer">Students' Association</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- This is the footer at the bottom of the page -->
+  <footer class="footer">
+    <!-- Container keeps the footer content aligned with the rest of the page -->
+    <div class="container">
+      <!-- Short footer text about the website -->
+      <p>Student Hub — a modern college clubs website concept.</p>
+
+      <!-- Copyright text -->
+      <p>&copy; 2026 Student Hub. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

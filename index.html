@@ -1,0 +1,451 @@
+<!-- This tells the browser that this file uses HTML5 -->
+<!DOCTYPE html>
+
+<!-- This is the main root of the whole page, and the page language is English -->
+<html lang="en">
+<head>
+  <!-- This sets the text encoding so letters and symbols display properly -->
+  <meta charset="UTF-8">
+
+  <!-- This helps the page scale correctly on phones, tablets and laptops -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- This is the page title shown in the browser tab -->
+  <title>Student Hub</title>
+
+  <!-- This connects early to Google Fonts to help the font load faster -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- This connects to the second Google Fonts server -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- This imports the Inter font in different font weights -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- This links the main CSS file for all the page styling -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- This links the JavaScript file, and defer means it runs after the HTML loads -->
+  <script src="script.js" defer></script>
+
+  <!-- This adds the small icon shown in the browser tab -->
+  <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
+</head>
+
+<!-- Everything inside body is the visible page content -->
+<body>
+  <!-- This is the top section of the page with the logo and menu -->
+  <header class="site-header">
+    <!-- This keeps the content centred and stops it stretching too wide -->
+    <div class="container">
+      <!-- This is the navigation bar -->
+      <nav class="nav">
+        <!-- This is the logo area, and it links back to the homepage -->
+        <a class="brand" href="index.html" aria-label="Student Hub home">
+          <!-- This is the logo image -->
+          <img class="brand-logo" src="images/student-hub-logo-header.png" alt="Student Hub logo">
+
+          <!-- This is the website name shown next to the logo -->
+          <span class="brand-text">Student Hub</span>
+        </a>
+
+        <!-- This is the mobile menu button -->
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <!-- First line of the burger menu icon -->
+          <span></span>
+
+          <!-- Second line of the burger menu icon -->
+          <span></span>
+
+          <!-- Third line of the burger menu icon -->
+          <span></span>
+        </button>
+
+        <!-- These are the navigation links -->
+        <div class="nav-links" id="site-nav">
+          <!-- Link to the homepage -->
+          <a href="index.html">Home</a>
+
+          <!-- Link to the clubs page -->
+          <a href="clubs.html">Clubs</a>
+
+          <!-- Link to the student deals page -->
+          <a href="student-deals.html">Student Deals</a>
+
+          <!-- Link to the contact page -->
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- This is the main content area of the page -->
+  <main class="container">
+    <!-- This is the hero section at the top of the homepage -->
+    <section class="hero hero-home">
+      <!-- This creates a layout with text on one side and an image on the other -->
+      <div class="hero-grid">
+        <!-- This is the text side of the hero section -->
+        <div class="hero-copy">
+          <!-- Small label above the main heading -->
+          <span class="eyebrow">College Clubs Website</span>
+
+          <!-- Main heading of the homepage -->
+          <h1>Find, explore and join student clubs quickly.</h1>
+
+          <!-- Short intro text explaining what the site does -->
+          <p>
+            Student Hub helps students discover clubs, compare activities, view meeting details
+            and send enquiries in only a few clicks.
+          </p>
+
+          <!-- These are the main action buttons in the hero section -->
+          <div class="hero-actions">
+            <!-- Button that takes the user to the clubs page -->
+            <a class="button" href="clubs.html">Explore Clubs</a>
+
+            <!-- Button that takes the user to the contact page -->
+            <a class="button" href="contact.html">Join a Club</a>
+          </div>
+
+          <!-- This block shows some quick stats -->
+          <div class="hero-stats">
+            <!-- First stat box -->
+            <div class="stat">
+              <!-- Big number -->
+              <strong>9</strong>
+
+              <!-- Short label for the number -->
+              <span>Club pages</span>
+            </div>
+
+            <!-- Second stat box -->
+            <div class="stat">
+              <!-- Big number -->
+              <strong>3</strong>
+
+              <!-- Short label for the number -->
+              <span>Quick steps</span>
+            </div>
+
+            <!-- Third stat box -->
+            <div class="stat">
+              <!-- Big number -->
+              <strong>1</strong>
+
+              <!-- Short label for the number -->
+              <span>Student hub</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- This is the visual side of the hero section -->
+        <div class="hero-visual">
+          <!-- Main card that holds the hero image -->
+          <div class="hero-card hero-main-card">
+            <!-- Main hero image -->
+            <img src="images/hero-students.jpg" alt="Students talking at college">
+          </div>
+
+          <!-- Floating badge showing one club category -->
+          <div class="floating-badge badge-purple">Creative + Culture</div>
+
+          <!-- Floating badge showing another club category -->
+          <div class="floating-badge badge-pink">Social + Esports</div>
+
+          <!-- Floating badge showing the wellbeing category -->
+          <div class="floating-badge badge-cyan">Wellbeing</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- This section shows a featured video -->
+    <section class="section">
+      <!-- This creates a two-column layout for text and video -->
+      <div class="media-grid">
+        <!-- This is the text part of the video section -->
+        <div class="media-copy">
+          <!-- Small label above the heading -->
+          <span class="eyebrow">Student life</span>
+
+          <!-- Heading for the video section -->
+          <h2>Featured club video</h2>
+
+          <!-- First paragraph explaining the video -->
+          <p>
+            Use a short promotional video to show student life, club highlights and the atmosphere
+            around the campus community.
+          </p>
+
+          <!-- Second paragraph explaining why the video helps -->
+          <p>
+            This gives the homepage more energy and helps visitors understand the vibe of the site
+            before they start exploring.
+          </p>
+
+          <!-- Buttons under the video text -->
+          <div class="hero-actions">
+            <!-- Button linking to the clubs page -->
+            <a class="button" href="clubs.html">Explore Clubs</a>
+
+            <!-- Button linking to the deals page -->
+            <a class="button" href="student-deals.html">View Student Deals</a>
+          </div>
+        </div>
+
+        <!-- This is the box that holds the video -->
+        <div class="video-shell">
+          <!-- Video player with controls, and poster shows before the video plays -->
+          <video controls poster="images/video-poster.jpg">
+            <!-- This is the video file -->
+            <source src="videos/student-life.mp4" type="video/mp4">
+
+            <!-- This text appears if the browser cannot play the video -->
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- This section shows featured clubs -->
+    <section class="section">
+      <!-- Heading area for the section -->
+      <div class="section-heading">
+        <!-- Small label above the heading -->
+        <span class="eyebrow">Popular picks</span>
+
+        <!-- Main heading for featured clubs -->
+        <h2>Featured clubs</h2>
+
+        <!-- Short text explaining the section -->
+        <p>
+          Start with a few highlighted clubs, then move to the full clubs page to browse everything
+          in one place.
+        </p>
+      </div>
+
+      <!-- Grid layout for the club cards -->
+      <div class="featured-grid">
+        <!-- First featured club card -->
+        <article class="club-card large-card">
+          <!-- Image area for the club card -->
+          <div class="club-image">
+            <!-- Club image -->
+            <img src="images/art-club.jpg" alt="Art Club">
+          </div>
+
+          <!-- Text content for the card -->
+          <div class="club-content">
+            <!-- Club category tag -->
+            <span class="club-tag">Creative</span>
+
+            <!-- Club name -->
+            <h3>Art Club</h3>
+
+            <!-- Short club description -->
+            <p>Sketch, paint, experiment and build projects with other creative students.</p>
+
+            <!-- Button linking to the Art Club page -->
+            <a class="button" href="art-club.html">View club</a>
+          </div>
+        </article>
+
+        <!-- Second featured club card -->
+        <article class="club-card">
+          <!-- Image area for the club card -->
+          <div class="club-image">
+            <!-- Club image -->
+            <img src="images/gaming-club.jpg" alt="Gaming Club">
+          </div>
+
+          <!-- Text content for the card -->
+          <div class="club-content">
+            <!-- Club category tag -->
+            <span class="club-tag">Social + Esports</span>
+
+            <!-- Club name -->
+            <h3>Gaming Club</h3>
+
+            <!-- Short club description -->
+            <p>Multiplayer sessions, tournaments and a proper student gaming vibe.</p>
+
+            <!-- Button linking to the Gaming Club page -->
+            <a class="button" href="gaming-club.html">View club</a>
+          </div>
+        </article>
+
+        <!-- Third featured club card -->
+        <article class="club-card">
+          <!-- Image area for the club card -->
+          <div class="club-image">
+            <!-- Club image -->
+            <img src="images/yoga-wellness-club.jpg" alt="Yoga and Wellness Club">
+          </div>
+
+          <!-- Text content for the card -->
+          <div class="club-content">
+            <!-- Club category tag -->
+            <span class="club-tag">Wellbeing</span>
+
+            <!-- Club name -->
+            <h3>Yoga &amp; Wellness</h3>
+
+            <!-- Short club description -->
+            <p>Stretch, breathe, reset and take a break from the pressure.</p>
+
+            <!-- Button linking to the Yoga & Wellness page -->
+            <a class="button" href="yoga-wellness-club.html">View club</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- This section shows campus info and social media links -->
+    <section class="section">
+      <!-- This splits the content into two side-by-side areas -->
+      <div class="split">
+        <!-- Left side with campus information -->
+        <div>
+          <!-- Small label above the heading -->
+          <span class="eyebrow">Find your way</span>
+
+          <!-- Section heading -->
+          <h2>Campuses</h2>
+
+          <!-- Short text about the campus section -->
+          <p>
+            Explore New College Lanarkshire campuses and find the location that suits you best.
+          </p>
+
+          <!-- Small box with a campus button -->
+          <div class="campus-box">
+            <!-- Small heading inside the box -->
+            <h3>Find a campus</h3>
+
+            <!-- Short explanation text -->
+            <p>
+              View all college locations, addresses and travel information on the official website.
+            </p>
+
+            <!-- External link to the official campuses page -->
+            <a
+              class="button"
+              href="https://www.nclanarkshire.ac.uk/locations-and-facilities/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View New College Lanarkshire campuses"
+            >
+              View campuses
+            </a>
+          </div>
+        </div>
+
+        <!-- Right side with social media links -->
+        <div>
+          <!-- Small label above the heading -->
+          <span class="eyebrow">Stay connected</span>
+
+          <!-- Section heading -->
+          <h2>Social media</h2>
+
+          <!-- Short text for the social section -->
+          <p>Follow for updates, events and student news.</p>
+
+          <!-- Container for social media buttons -->
+          <div class="social-links">
+            <!-- Instagram link -->
+            <a
+              class="social-link"
+              href="https://www.instagram.com/nclanarkshire/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <!-- Instagram icon -->
+              <img src="icons/instagram.svg" alt="Instagram icon">
+
+              <!-- Instagram text -->
+              <span>Instagram</span>
+            </a>
+
+            <!-- Facebook link -->
+            <a
+              class="social-link"
+              href="https://www.facebook.com/NCLanarkshire/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <!-- Facebook icon -->
+              <img src="icons/facebook.svg" alt="Facebook icon">
+
+              <!-- Facebook text -->
+              <span>Facebook</span>
+            </a>
+
+            <!-- X link -->
+            <a
+              class="social-link"
+              href="https://x.com/NCLanarkshire"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <!-- X icon -->
+              <img src="icons/x.svg" alt="X icon">
+
+              <!-- X text -->
+              <span>X</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final section with extra support links -->
+    <section class="section">
+      <!-- Call-to-action box -->
+      <div class="cta-box">
+        <!-- Left side with text -->
+        <div>
+          <!-- Small label -->
+          <span class="eyebrow">Useful extras</span>
+
+          <!-- Main heading -->
+          <h2>More student support</h2>
+
+          <!-- Short explanation text -->
+          <p>
+            Looking for practical discounts, travel offers and student-friendly services? Use the
+            Student Deals page to find helpful links across Scotland and the UK.
+          </p>
+        </div>
+
+        <!-- Right side with buttons -->
+        <div class="hero-actions">
+          <!-- Button linking to the student deals page -->
+          <a class="button" href="student-deals.html">Open deals page</a>
+
+          <!-- Button linking to the contact page -->
+          <a class="button" href="contact.html">Contact Student Hub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- This is the footer at the bottom of the page -->
+  <footer class="footer">
+    <!-- Container keeps the footer content aligned with the rest of the page -->
+    <div class="container">
+      <!-- Short footer text about the website -->
+      <p>Student Hub — a modern college clubs website concept.</p>
+
+      <!-- Copyright text -->
+      <p>&copy; 2026 Student Hub. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

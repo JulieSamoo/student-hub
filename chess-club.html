@@ -1,0 +1,372 @@
+<!-- This tells the browser that this file uses HTML5 -->
+<!DOCTYPE html>
+
+<!-- This is the main root of the whole page, and the page language is English -->
+<html lang="en">
+<head>
+  <!-- This sets the text encoding so letters and symbols display properly -->
+  <meta charset="UTF-8">
+
+  <!-- This helps the page scale correctly on phones, tablets and laptops -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- This is the page title shown in the browser tab -->
+  <title>Chess Club - Student Hub</title>
+
+  <!-- This connects early to Google Fonts to help the font load faster -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- This connects to the second Google Fonts server -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- This imports the Inter font in different font weights -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- This links the main CSS file for all the page styling -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- This links the JavaScript file, and defer means it runs after the HTML loads -->
+  <script src="script.js" defer></script>
+
+  <!-- This adds the small icon shown in the browser tab -->
+  <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
+</head>
+
+<!-- Everything inside body is the visible page content -->
+<body>
+  <!-- This is the top section of the page with the logo and menu -->
+  <header class="site-header">
+    <!-- This keeps the content centred and stops it stretching too wide -->
+    <div class="container">
+      <!-- This is the navigation bar -->
+      <nav class="nav">
+        <!-- This is the logo area, and it links back to the homepage -->
+        <a class="brand" href="index.html" aria-label="Student Hub home">
+          <!-- This is the logo image -->
+          <img class="brand-logo" src="images/student-hub-logo-header.png" alt="Student Hub logo">
+
+          <!-- This is the website name shown next to the logo -->
+          <span class="brand-text">Student Hub</span>
+        </a>
+
+        <!-- This is the mobile menu button -->
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <!-- First line of the burger menu icon -->
+          <span></span>
+
+          <!-- Second line of the burger menu icon -->
+          <span></span>
+
+          <!-- Third line of the burger menu icon -->
+          <span></span>
+        </button>
+
+        <!-- These are the navigation links -->
+        <div class="nav-links" id="site-nav">
+          <!-- Link to the homepage -->
+          <a href="index.html">Home</a>
+
+          <!-- Link to the clubs page -->
+          <a href="clubs.html">Clubs</a>
+
+          <!-- Link to the student deals page -->
+          <a href="student-deals.html">Student Deals</a>
+
+          <!-- Link to the contact page -->
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- This is the main content area of the page -->
+  <main class="container">
+    <!-- This is the hero section at the top of the Chess Club page -->
+    <section class="hero">
+      <!-- This creates a layout with text on one side and an image on the other -->
+      <div class="hero-grid">
+        <!-- This is the text side of the hero section -->
+        <div class="hero-copy">
+          <!-- Small label above the main heading -->
+          <span class="eyebrow">Strategy club</span>
+
+          <!-- Main heading of the page -->
+          <h1>Chess Club</h1>
+
+          <!-- Short intro text explaining the club -->
+          <p>
+            Chess Club is a calm and social space for strategy, concentration, friendly matches
+            and steady improvement through regular play.
+          </p>
+
+          <!-- These are the main action buttons in the hero section -->
+          <div class="hero-actions">
+            <!-- Button that takes the user to the contact page -->
+            <a class="button" href="contact.html">Join this club</a>
+
+            <!-- Button that takes the user back to the clubs page -->
+            <a class="button button-secondary" href="clubs.html">Back to clubs</a>
+          </div>
+        </div>
+
+        <!-- This is the hero image shown on the right side -->
+        <div class="hero-card hero-main-card">
+          <!-- Main image for the Chess Club page -->
+          <img src="images/chess-club-poster.jpg" alt="Students playing chess during a club session">
+        </div>
+      </div>
+    </section>
+
+    <!-- This section shows the main club information -->
+    <section class="section">
+      <div class="card">
+        <div class="card-body">
+          <!-- Small label above the heading -->
+          <span class="eyebrow">Club information</span>
+
+          <!-- Main heading for this card -->
+          <h2>Session details</h2>
+
+          <!-- Meeting time -->
+          <p><strong>Meeting time:</strong> Tuesdays, 4:00 PM</p>
+
+          <!-- Club location -->
+          <p><strong>Location:</strong> Library Study Area</p>
+
+          <!-- Club email -->
+          <p><strong>Email:</strong> chess@studenthub.ac.uk</p>
+
+          <!-- Short summary of what students can expect -->
+          <p>
+            <strong>What to expect:</strong> Friendly games, tactical practice, casual competition
+            and a welcoming place to improve your decision-making skills.
+          </p>
+
+          <!-- These are extra social and student support links -->
+          <div class="social top-gap-12">
+            <a href="https://www.nclanarkshire.ac.uk/for-applicants/student-support-and-resources/students-association/" target="_blank" rel="noopener noreferrer">Students' Association</a>
+            <a href="https://www.facebook.com/NCLanarkshire/" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.instagram.com/nclanarkshire/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://x.com/NCLanarkshire" target="_blank" rel="noopener noreferrer">X</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- This section explains more about the club and who it is for -->
+    <section class="section split">
+      <!-- First card with more details about the club -->
+      <div class="card">
+        <div class="card-body">
+          <!-- Small label above the heading -->
+          <span class="eyebrow">About the club</span>
+
+          <!-- Main heading -->
+          <h2>Play, learn and think ahead</h2>
+
+          <!-- First paragraph about club activities -->
+          <p>
+            Chess Club brings students together through strategy, problem-solving and regular practice
+            in a relaxed environment. Sessions can include casual games, short challenges and opportunities
+            to learn from stronger players.
+          </p>
+
+          <!-- Second paragraph about the club atmosphere -->
+          <p>
+            The club is designed to be enjoyable as well as challenging, so students can build skill over time
+            without the pressure of a highly formal competitive setting.
+          </p>
+        </div>
+      </div>
+
+      <!-- Second card explaining who the club suits -->
+      <div class="card">
+        <div class="card-body">
+          <!-- Small label above the heading -->
+          <span class="eyebrow">Who it suits</span>
+
+          <!-- Main heading -->
+          <h2>Beginners and experienced players</h2>
+
+          <!-- First paragraph about who can join -->
+          <p>
+            This club suits students who enjoy thinking ahead, spotting patterns and improving through practice.
+            It works well for both complete beginners and players who already know the game.
+          </p>
+
+          <!-- Second paragraph about the type of students it may suit -->
+          <p>
+            Students who like concentration, logical thinking and calm competition often find Chess Club
+            a rewarding way to connect with others outside class.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- This section shows another image and explains the club atmosphere -->
+    <section class="section">
+      <div class="media-grid">
+        <!-- This is the image side of the section -->
+        <div class="media-box">
+          <img src="images/chess-club.jpg" alt="Stylised chess-themed visual representing focus and club identity">
+        </div>
+
+        <!-- This is the text side of the section -->
+        <div class="media-copy">
+          <!-- Small label above the heading -->
+          <span class="eyebrow">Club spirit</span>
+
+          <!-- Main heading -->
+          <h2>Strategy, focus and atmosphere</h2>
+
+          <!-- First paragraph about the club atmosphere -->
+          <p>
+            Chess Club has a thoughtful and focused atmosphere, but it is still social and welcoming.
+            Students can take time over a game, discuss ideas and enjoy the rhythm of regular play.
+          </p>
+
+          <!-- Second paragraph about why students join -->
+          <p>
+            For many students, the appeal is not only competition but also the satisfaction of learning,
+            improving concentration and developing confidence in decision-making.
+          </p>
+
+          <!-- Button linking to the contact page -->
+          <a class="button top-gap-12" href="contact.html">Ask about joining</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- This section shows activities and how to get involved -->
+    <section class="section split">
+      <!-- First card with example activities -->
+      <div class="card">
+        <div class="card-body">
+          <!-- Small label above the heading -->
+          <span class="eyebrow">Activities</span>
+
+          <!-- Main heading -->
+          <h2>What students might do</h2>
+
+          <!-- List of possible club activities -->
+          <ul class="clean-list">
+            <li>Play friendly games with other students.</li>
+            <li>Practise tactics and opening ideas.</li>
+            <li>Take part in mini tournaments or timed challenges.</li>
+            <li>Learn by observing and discussing different approaches.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Second card with joining information -->
+      <div class="card">
+        <div class="card-body">
+          <!-- Small label above the heading -->
+          <span class="eyebrow">Getting involved</span>
+
+          <!-- Main heading -->
+          <h2>How to take part</h2>
+
+          <!-- Short explanation text -->
+          <p>
+            Use the contact page to ask about joining, session times and availability.
+            You can also explore the Students’ Association page for wider student activities and updates.
+          </p>
+
+          <!-- Buttons for joining and official contact -->
+          <div class="hero-actions top-gap-12">
+            <a class="button" href="contact.html">Send an enquiry</a>
+            <a class="button button-secondary" href="https://www.nclanarkshire.ac.uk/corporate/contact-us/" target="_blank" rel="noopener noreferrer">Official contact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- This section explains why students might join -->
+    <section class="section">
+      <!-- Heading area for the section -->
+      <div class="section-heading">
+        <!-- Small label above the heading -->
+        <span class="eyebrow">Why students join</span>
+
+        <!-- Main heading -->
+        <h2>Reasons to get involved</h2>
+
+        <!-- Short intro text -->
+        <p>
+          Chess Club combines social connection with strategy, concentration and steady personal progress.
+        </p>
+      </div>
+
+      <!-- This row holds the three reason cards -->
+      <div class="cards-row">
+        <!-- First reason card -->
+        <article class="card">
+          <div class="card-body">
+            <h3>Sharper thinking</h3>
+            <p>Build focus, planning and problem-solving through regular games and tactical practice.</p>
+          </div>
+        </article>
+
+        <!-- Second reason card -->
+        <article class="card">
+          <div class="card-body">
+            <h3>Friendly competition</h3>
+            <p>Enjoy matches in a calm environment where students can challenge themselves and each other.</p>
+          </div>
+        </article>
+
+        <!-- Third reason card -->
+        <article class="card">
+          <div class="card-body">
+            <h3>Shared interest</h3>
+            <p>Meet other students who enjoy strategy, concentration and learning through play.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- This is the final call-to-action section -->
+    <section class="section">
+      <div class="card">
+        <div class="card-body">
+          <!-- Small label above the heading -->
+          <span class="eyebrow">Next step</span>
+
+          <!-- Main heading -->
+          <h2>Interested in joining?</h2>
+
+          <!-- Final message for the user -->
+          <p>
+            If Chess Club sounds like a good fit, send an enquiry through the contact page and mention the club name.
+          </p>
+
+          <!-- Final action buttons -->
+          <div class="hero-actions top-gap-12">
+            <a class="button" href="contact.html">Go to contact page</a>
+            <a class="button button-secondary" href="clubs.html">View all clubs</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- This is the footer at the bottom of the page -->
+  <footer class="footer">
+    <!-- Container keeps the footer content aligned with the rest of the page -->
+    <div class="container">
+      <!-- Short footer text about the website -->
+      <p>Student Hub — a modern college clubs website concept.</p>
+
+      <!-- Copyright text -->
+      <p>&copy; 2026 Student Hub. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

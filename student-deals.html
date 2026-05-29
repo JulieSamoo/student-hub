@@ -1,0 +1,325 @@
+<!-- This tells the browser that this file uses HTML5 -->
+<!DOCTYPE html>
+
+<!-- This is the main root of the whole page, and the page language is English -->
+<html lang="en">
+<head>
+  <!-- This sets the text encoding so letters and symbols display properly -->
+  <meta charset="UTF-8">
+
+  <!-- This helps the page scale correctly on phones, tablets and laptops -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- This is the page title shown in the browser tab -->
+  <title>Student Deals - Student Hub</title>
+
+  <!-- This connects early to Google Fonts to help the font load faster -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- This connects to the second Google Fonts server -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- This imports the Inter font in different font weights -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- This links the main CSS file for all the page styling -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- This links the JavaScript file, and defer means it runs after the HTML loads -->
+  <script src="script.js" defer></script>
+
+  <!-- This adds the small icon shown in the browser tab -->
+  <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
+</head>
+
+<!-- Everything inside body is the visible page content -->
+<body>
+  <!-- This is the top section of the page with the logo and menu -->
+  <header class="site-header">
+    <!-- This keeps the content centred and stops it stretching too wide -->
+    <div class="container">
+      <!-- This is the navigation bar -->
+      <nav class="nav">
+        <!-- This is the logo area, and it links back to the homepage -->
+        <a class="brand" href="index.html" aria-label="Student Hub home">
+          <!-- This is the logo image -->
+          <img class="brand-logo" src="images/student-hub-logo-header.png" alt="Student Hub logo">
+
+          <!-- This is the website name shown next to the logo -->
+          <span class="brand-text">Student Hub</span>
+        </a>
+
+        <!-- This is the mobile menu button -->
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <!-- First line of the burger menu icon -->
+          <span></span>
+
+          <!-- Second line of the burger menu icon -->
+          <span></span>
+
+          <!-- Third line of the burger menu icon -->
+          <span></span>
+        </button>
+
+        <!-- These are the navigation links -->
+        <div class="nav-links" id="site-nav">
+          <!-- Link to the homepage -->
+          <a href="index.html">Home</a>
+
+          <!-- Link to the clubs page -->
+          <a href="clubs.html">Clubs</a>
+
+          <!-- Link to the student deals page -->
+          <a href="student-deals.html">Student Deals</a>
+
+          <!-- Link to the contact page -->
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- This is the main content area of the page -->
+  <main class="container">
+    <!-- This is the hero section at the top of the student deals page -->
+    <section class="hero">
+      <!-- This creates a layout with text on one side and a card on the other -->
+      <div class="hero-grid">
+        <!-- This is the text side of the hero section -->
+        <div class="hero-copy">
+          <!-- Small label above the main heading -->
+          <span class="eyebrow">Scotland & UK savings</span>
+
+          <!-- Main heading of the page -->
+          <h1>Student deals and useful services.</h1>
+
+          <!-- Short intro text explaining the purpose of the page -->
+          <p>
+            This page brings together useful student discount platforms, travel offers and
+            practical services that may help students in Scotland and across the UK.
+          </p>
+
+          <!-- These are the main action buttons in the hero section -->
+          <div class="hero-actions">
+            <!-- Button that jumps down to the platforms section -->
+            <a class="button" href="#platforms">Explore platforms</a>
+
+            <!-- Button that takes the user back to the clubs page -->
+            <a class="button button-secondary" href="clubs.html">Back to clubs</a>
+          </div>
+        </div>
+
+        <!-- This card gives a quick overview of what students can use -->
+        <div class="card">
+          <div class="card-body">
+            <!-- Small heading for the card -->
+            <h2>What you can use</h2>
+
+            <!-- List of the main types of student resources -->
+            <ul class="clean-list">
+              <li>Student discount apps and memberships.</li>
+              <li>Everyday savings and promo code platforms.</li>
+              <li>Event discovery tools and local ideas.</li>
+              <li>Budgeting advice and student finance guides.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- This section shows the main student discount platforms -->
+    <section class="section" id="platforms">
+      <!-- Heading area for the section -->
+      <div class="section-heading">
+        <!-- Small label above the heading -->
+        <span class="eyebrow">Useful platforms</span>
+
+        <!-- Main heading for the section -->
+        <h2>Popular student resources</h2>
+
+        <!-- Short text explaining the section -->
+        <p>
+          These links are helpful starting points for verified student discounts, events and practical money-saving tools.
+        </p>
+      </div>
+
+      <!-- This grid holds all the resource cards -->
+      <div class="grid">
+        <!-- TOTUM card -->
+        <article class="card">
+          <div class="card-body">
+            <!-- Platform name -->
+            <h3>TOTUM</h3>
+
+            <!-- Short platform description -->
+            <p>Student discount platform with offers on food, shopping, travel and technology.</p>
+
+            <!-- Button linking to the TOTUM website -->
+            <a class="button top-gap-12" href="https://totum.com/" target="_blank" rel="noopener noreferrer">Visit TOTUM</a>
+          </div>
+        </article>
+
+        <!-- UNiDAYS card -->
+        <article class="card">
+          <div class="card-body">
+            <!-- Platform name -->
+            <h3>UNiDAYS</h3>
+
+            <!-- Short platform description -->
+            <p>Popular student discounts for fashion, tech, food delivery and everyday spending.</p>
+
+            <!-- Button linking to the UNiDAYS website -->
+            <a class="button top-gap-12" href="https://www.myunidays.com/GB/en-GB" target="_blank" rel="noopener noreferrer">Visit UNiDAYS</a>
+          </div>
+        </article>
+
+        <!-- Student Beans card -->
+        <article class="card">
+          <div class="card-body">
+            <!-- Platform name -->
+            <h3>Student Beans</h3>
+
+            <!-- Short platform description -->
+            <p>Discount codes and student offers across online shopping, lifestyle and travel.</p>
+
+            <!-- Button linking to the Student Beans website -->
+            <a class="button top-gap-12" href="https://www.studentbeans.com/uk" target="_blank" rel="noopener noreferrer">Visit Student Beans</a>
+          </div>
+        </article>
+
+        <!-- Skiddle card -->
+        <article class="card">
+          <div class="card-body">
+            <!-- Platform name -->
+            <h3>Skiddle</h3>
+
+            <!-- Short platform description -->
+            <p>Useful for finding events, club nights and local activities across Scotland and the UK.</p>
+
+            <!-- Button linking to the Skiddle website -->
+            <a class="button top-gap-12" href="https://www.skiddle.com/" target="_blank" rel="noopener noreferrer">Visit Skiddle</a>
+          </div>
+        </article>
+
+        <!-- VisitScotland card -->
+        <article class="card">
+          <div class="card-body">
+            <!-- Platform name -->
+            <h3>VisitScotland</h3>
+
+            <!-- Short platform description -->
+            <p>Travel ideas, regional inspiration and useful planning support for days out in Scotland.</p>
+
+            <!-- Button linking to the VisitScotland website -->
+            <a class="button top-gap-12" href="https://www.visitscotland.com/" target="_blank" rel="noopener noreferrer">Visit VisitScotland</a>
+          </div>
+        </article>
+
+        <!-- Save the Student card -->
+        <article class="card">
+          <div class="card-body">
+            <!-- Platform name -->
+            <h3>Save the Student</h3>
+
+            <!-- Short platform description -->
+            <p>Money-saving guides, budgeting help, student finance advice and practical offers.</p>
+
+            <!-- Button linking to the Save the Student website -->
+            <a class="button top-gap-12" href="https://www.savethestudent.org/" target="_blank" rel="noopener noreferrer">Visit Save the Student</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- This section gives extra advice and support -->
+    <section class="section split">
+      <!-- First card with quick tips -->
+      <div class="card">
+        <div class="card-body">
+          <!-- Small label above the heading -->
+          <span class="eyebrow">Before you use offers</span>
+
+          <!-- Main heading -->
+          <h2>Quick tips</h2>
+
+          <!-- List of practical tips for using deals -->
+          <ul class="clean-list">
+            <li>Check whether student verification is required.</li>
+            <li>Compare prices before using a discount code.</li>
+            <li>Look for local and regional offers, not only national ones.</li>
+            <li>Check expiry dates and travel restrictions carefully.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Second card with official support links -->
+      <div class="card">
+        <div class="card-body">
+          <!-- Small label above the heading -->
+          <span class="eyebrow">Support</span>
+
+          <!-- Main heading -->
+          <h2>Need official college help?</h2>
+
+          <!-- Short explanation text -->
+          <p>
+            For support, guidance and general questions, use the contact page or the official college website.
+          </p>
+
+          <!-- Buttons for support links -->
+          <div class="hero-actions">
+            <!-- Button linking to the contact page -->
+            <a class="button" href="contact.html">Go to contact page</a>
+
+            <!-- Button linking to the official college website -->
+            <a class="button button-secondary" href="https://www.nclanarkshire.ac.uk" target="_blank" rel="noopener noreferrer">Official website</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- This section gives a few useful official college links -->
+    <section class="section">
+      <div class="card">
+        <div class="card-body">
+          <!-- Small label above the heading -->
+          <span class="eyebrow">Student support</span>
+
+          <!-- Main heading -->
+          <h2>Useful official links</h2>
+
+          <!-- Short explanation text -->
+          <p>
+            Use official college pages for contact details, student support and Students’ Association information.
+          </p>
+
+          <!-- These are the official support links -->
+          <div class="social">
+            <a href="https://www.nclanarkshire.ac.uk/corporate/contact-us/" target="_blank" rel="noopener noreferrer">Contact us</a>
+            <a href="https://www.nclanarkshire.ac.uk/for-applicants/student-support-and-resources/students-association/" target="_blank" rel="noopener noreferrer">Students' Association</a>
+            <a href="https://www.nclanarkshire.ac.uk/locations-and-facilities/" target="_blank" rel="noopener noreferrer">Campuses</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- This is the footer at the bottom of the page -->
+  <footer class="footer">
+    <!-- Container keeps the footer content aligned with the rest of the page -->
+    <div class="container">
+      <!-- Short footer text about the website -->
+      <p>Student Hub — a modern college clubs website concept.</p>
+
+      <!-- Copyright text -->
+      <p>&copy; 2026 Student Hub. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

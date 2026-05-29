@@ -1,0 +1,1087 @@
+/* This root section stores reusable design variables for colours, shadows, sizes and layout */
+:root {
+  --bg: #eef3f6;
+  --bg-2: #f8fbfc;
+  --surface: rgba(255, 255, 255, 0.88);
+  --surface-strong: #ffffff;
+  --surface-soft: #f2f7f8;
+  --text: #16324f;
+  --muted: #5b6b7d;
+  --line: rgba(22, 50, 79, 0.12);
+  --accent: #118a97;
+  --accent-strong: #0d6f7a;
+  --accent-soft: #dbf4f6;
+  --nav-hover: #e6f5f6;
+  --purple: #7d5cff;
+  --pink: #ff5fa2;
+  --cyan: #33c7df;
+  --green: #2db87c;
+  --shadow: 0 10px 30px rgba(16, 34, 53, 0.08);
+  --shadow-lg: 0 18px 50px rgba(16, 34, 53, 0.12);
+  --radius: 24px;
+  --radius-sm: 16px;
+  --container: 1200px;
+}
+
+/* This makes width and height calculations easier across all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* This makes anchor links scroll smoothly */
+html {
+  scroll-behavior: smooth;
+}
+
+/* This sets the base styling for the whole page */
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  background:
+    radial-gradient(circle at top left, rgba(17, 138, 151, 0.10), transparent 28%),
+    radial-gradient(circle at top right, rgba(125, 92, 255, 0.08), transparent 22%),
+    linear-gradient(180deg, #f7fbfd 0%, #edf3f6 45%, #e8eff3 100%);
+}
+
+/* This makes images and videos behave as block elements and stay responsive */
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* This keeps images proportional when resizing */
+img {
+  height: auto;
+}
+
+/* This makes links inherit the surrounding text colour unless changed later */
+a {
+  color: inherit;
+}
+
+/* This controls the main page width and keeps content centred */
+.container {
+  width: min(var(--container), calc(100% - 32px));
+  margin: 0 auto;
+}
+
+/* This styles the sticky site header at the top of the page */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(14px);
+  background: rgba(248, 251, 252, 0.82);
+  border-bottom: 1px solid rgba(22, 50, 79, 0.08);
+}
+
+/* This styles the navigation bar layout */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  min-height: 88px;
+}
+
+/* This styles the brand area with the logo and site name */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  min-width: 0;
+}
+
+/* This controls the logo image size and appearance */
+.brand-logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  flex: 0 0 auto;
+  background: transparent;
+  filter: drop-shadow(0 6px 16px rgba(17, 138, 151, 0.10));
+}
+
+/* This styles the Student Hub text beside the logo */
+.brand-text {
+  font-size: 1.9rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  line-height: 1;
+}
+
+/* This styles the desktop navigation links container */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* This styles each navigation link */
+.nav-links a {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--text);
+  padding: 12px 16px;
+  border-radius: 999px;
+  transition: 0.2s ease;
+}
+
+/* This styles navigation links when hovered, focused or active */
+.nav-links a:hover,
+.nav-links a:focus-visible,
+.nav-links a.active {
+  background: var(--nav-hover);
+  color: var(--accent-strong);
+}
+
+/* This styles the mobile menu button */
+.menu-toggle {
+  display: none;
+  width: 52px;
+  height: 52px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  box-shadow: none;
+  color: var(--text);
+}
+
+/* This styles the three lines inside the mobile burger icon */
+.menu-toggle span {
+  width: 22px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--text);
+  display: block;
+}
+
+/* This adds spacing below the sticky header before the page content starts */
+main {
+  padding: 28px 0 64px;
+}
+
+/* These are shared card-like container styles used in multiple sections */
+.hero,
+.section,
+.card,
+.panel {
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  border-radius: 32px;
+}
+
+/* This styles the main hero section */
+.hero {
+  padding: clamp(28px, 4vw, 48px);
+  margin: 0 0 22px;
+  overflow: hidden;
+}
+
+/* This makes the homepage hero able to hold extra decorative elements */
+.hero-home {
+  position: relative;
+}
+
+/* This adds a soft glowing circle decoration to the homepage hero */
+.hero-home::before {
+  content: "";
+  position: absolute;
+  inset: auto -120px -120px auto;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(51, 199, 223, 0.22), transparent 68%);
+  pointer-events: none;
+}
+
+/* This creates a two-column grid for hero text and hero image */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 28px;
+  align-items: center;
+}
+
+/* This styles the main hero heading */
+.hero-copy h1 {
+  margin: 14px 0 18px;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 0.94;
+  letter-spacing: -0.06em;
+  max-width: 12ch;
+}
+
+/* This styles the hero paragraph text */
+.hero-copy p {
+  margin: 0;
+  max-width: 60ch;
+  font-size: 1.15rem;
+  color: var(--muted);
+}
+
+/* These styles are shared by eyebrow labels and tags */
+.eyebrow,
+.club-tag,
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* This styles groups of buttons such as hero actions */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+/* These are shared button styles */
+.button,
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  font-weight: 800;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+/* This styles the main filled button */
+.button {
+  background: linear-gradient(135deg, var(--accent) 0%, #1a9faf 100%);
+  color: #fff;
+  box-shadow: 0 12px 24px rgba(17, 138, 151, 0.22);
+}
+
+/* This adds a lift effect when buttons are hovered or focused */
+.button:hover,
+.button:focus-visible,
+.btn:hover,
+.btn:focus-visible {
+  transform: translateY(-2px);
+}
+
+/* This styles the secondary button */
+.button-secondary {
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--accent-strong);
+  border-color: rgba(17, 138, 151, 0.18);
+  box-shadow: none;
+}
+
+/* This styles the quick stats row on the homepage hero */
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+/* This styles each stat box */
+.stat {
+  min-width: 120px;
+}
+
+/* This styles the main stat number */
+.stat strong {
+  display: block;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--text);
+}
+
+/* This styles the stat label below the number */
+.stat span {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.96rem;
+  color: var(--muted);
+}
+
+/* This creates a relative parent for the hero image and floating badges */
+.hero-visual {
+  position: relative;
+  min-height: 100%;
+}
+
+/* This styles image cards used in hero sections */
+.hero-card {
+  border-radius: 30px;
+  overflow: hidden;
+  background: var(--surface-strong);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+/* This controls the main hero image size and crop */
+.hero-main-card img {
+  width: 100%;
+  aspect-ratio: 4 / 4.2;
+  object-fit: cover;
+}
+
+/* This styles the floating label badges on the hero image */
+.floating-badge {
+  position: absolute;
+  padding: 11px 16px;
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.85rem;
+  box-shadow: var(--shadow-lg);
+}
+
+/* This styles the purple floating badge */
+.badge-purple {
+  top: 20px;
+  right: -8px;
+  background: linear-gradient(135deg, #8d66ff, #6c45f7);
+}
+
+/* This styles the pink floating badge */
+.badge-pink {
+  left: -10px;
+  bottom: 110px;
+  background: linear-gradient(135deg, #ff6aa9, #ff4e95);
+}
+
+/* This styles the cyan floating badge */
+.badge-cyan {
+  right: 40px;
+  bottom: -12px;
+  background: linear-gradient(135deg, #2bc9e2, #1697b6);
+}
+
+/* This styles standard page sections */
+.section {
+  padding: 30px;
+  margin: 0 0 22px;
+}
+
+/* This adds spacing below section headings */
+.section-heading {
+  margin-bottom: 22px;
+}
+
+/* This styles section titles */
+.section-heading h2 {
+  margin: 12px 0 8px;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+}
+
+/* This styles section intro text */
+.section-heading p {
+  margin: 0;
+  max-width: 58ch;
+  color: var(--muted);
+  font-size: 1.04rem;
+}
+
+/* These classes share grid layouts across the site */
+.info-grid,
+.interest-grid,
+.featured-grid,
+.grid,
+.cards-row,
+.split {
+  display: grid;
+  gap: 18px;
+}
+
+/* This creates a three-column layout for info cards */
+.info-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* These styles are shared by different card types */
+.info-card,
+.interest-card,
+.club-card,
+.card {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(22, 50, 79, 0.08);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+/* This styles info cards */
+.info-card {
+  padding: 24px;
+}
+
+/* This styles headings inside info cards */
+.info-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  letter-spacing: -0.03em;
+}
+
+/* This styles text inside info cards */
+.info-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* This creates a four-column layout for interest cards */
+.interest-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* This styles each interest card */
+.interest-card {
+  position: relative;
+  padding: 24px;
+  overflow: hidden;
+}
+
+/* This adds the decorative glow circle in the corner of interest cards */
+.interest-card::before {
+  content: "";
+  position: absolute;
+  inset: auto -30px -30px auto;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  opacity: 0.18;
+}
+
+/* These classes control the colour of the card glow */
+.glow-purple::before {
+  background: var(--purple);
+}
+
+.glow-cyan::before {
+  background: var(--cyan);
+}
+
+.glow-pink::before {
+  background: var(--pink);
+}
+
+.glow-green::before {
+  background: var(--green);
+}
+
+/* This styles the icon box inside each interest card */
+.interest-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px rgba(22, 50, 79, 0.08);
+}
+
+/* This styles interest card headings */
+.interest-card h3 {
+  margin: 18px 0 8px;
+  font-size: 1.25rem;
+}
+
+/* This styles interest card text */
+.interest-card p {
+  margin: 0 0 18px;
+  color: var(--muted);
+}
+
+/* This styles links inside interest cards */
+.interest-card a {
+  font-weight: 800;
+  color: var(--accent-strong);
+  text-decoration: none;
+}
+
+/* This creates the homepage featured clubs layout */
+.featured-grid {
+  grid-template-columns: 1.1fr 0.9fr 0.9fr;
+  align-items: stretch;
+}
+
+/* This styles each club card */
+.club-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* This styles the image area at the top of club cards */
+.club-image {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--surface-soft);
+}
+
+/* This makes club images fill the image area neatly */
+.club-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* This styles the text area inside club cards */
+.club-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 22px;
+}
+
+/* This styles club card titles */
+.club-content h3 {
+  margin: 12px 0 8px;
+  font-size: 1.45rem;
+  letter-spacing: -0.04em;
+}
+
+/* This styles club card descriptions */
+.club-content p {
+  margin: 0 0 18px;
+  min-height: 72px;
+  color: var(--muted);
+}
+
+/* This pushes the club button to the bottom of the card */
+.club-content .button,
+.club-content .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* This gives the large featured card a slightly different image ratio */
+.large-card .club-image {
+  aspect-ratio: 16 / 11;
+}
+
+/* This creates a two-column layout for text and media */
+.media-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 24px;
+  align-items: center;
+}
+
+/* This styles headings in media text sections */
+.media-copy h2 {
+  margin: 12px 0 10px;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  line-height: 1.03;
+  letter-spacing: -0.05em;
+}
+
+/* This styles paragraphs in media text sections */
+.media-copy p {
+  margin: 0 0 12px;
+  color: var(--muted);
+}
+
+/* This styles the featured video container */
+.video-shell {
+  overflow: hidden;
+  border-radius: 28px;
+  background: #09141d;
+  box-shadow: var(--shadow-lg);
+}
+
+/* This styles the video inside the featured video container */
+.video-shell video {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 28px;
+  display: block;
+}
+
+/* This styles call-to-action boxes with text on one side and buttons on the other */
+.cta-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* This styles the call-to-action heading */
+.cta-box h2 {
+  margin: 12px 0 8px;
+  font-size: clamp(1.9rem, 3vw, 3rem);
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+}
+
+/* This styles the call-to-action paragraph */
+.cta-box p {
+  margin: 0;
+  max-width: 54ch;
+  color: var(--muted);
+}
+
+/* This keeps generic cards neatly clipped */
+.card {
+  overflow: hidden;
+}
+
+/* This styles media areas inside cards */
+.card-media {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--surface-soft);
+}
+
+/* This makes images fill card media areas */
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* This styles the content area inside cards */
+.card-body {
+  padding: 20px;
+}
+
+/* This styles card headings */
+.card h3 {
+  margin: 0 0 8px;
+}
+
+/* This styles card text */
+.card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* This creates an auto-fitting responsive card grid */
+.grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+/* This makes cards in the grid stretch evenly */
+.grid .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* This makes the card body stretch so buttons can sit at the bottom */
+.grid .card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* This pushes buttons to the bottom of grid cards */
+.grid .card-body .button {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* This creates a responsive multi-card row */
+.cards-row {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* This creates a responsive split layout for two sections side by side */
+.split {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: start;
+}
+
+/* This styles a media image box */
+.media-box {
+  overflow: hidden;
+  border-radius: 24px;
+  background: #0b1620;
+}
+
+/* This makes images fill the media box */
+.media-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* This creates a responsive 16:9 video area */
+.video-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #0b1620;
+  padding-top: 56.25%;
+}
+
+/* This makes video or iframe content fill the video wrapper */
+.video-wrap video,
+.video-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* This styles forms with vertical spacing */
+.form {
+  display: grid;
+  gap: 14px;
+}
+
+/* This styles each field group */
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+/* This styles form labels */
+.field label {
+  font-weight: 700;
+}
+
+/* This styles form inputs, selects and textareas */
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(22, 50, 79, 0.12);
+  background: rgba(255, 255, 255, 0.92);
+  font: inherit;
+  color: var(--text);
+}
+
+/* This styles focused form fields so they are easier to see */
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: 3px solid rgba(17, 138, 151, 0.18);
+  border-color: rgba(17, 138, 151, 0.35);
+}
+
+/* This styles rows of pill-shaped social links */
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* This styles the individual social pills */
+.social a {
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--line);
+  font-weight: 700;
+}
+
+/* This styles the larger social link blocks */
+.social-links {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+/* This styles each large social link item */
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(22, 50, 79, 0.08);
+  box-shadow: var(--shadow);
+  font-weight: 700;
+  color: var(--text);
+  transition: transform 0.18s ease, background 0.18s ease, color 0.18s ease;
+}
+
+/* This adds a hover and focus effect to the social link blocks */
+.social-link:hover,
+.social-link:focus-visible {
+  transform: translateY(-2px);
+  background: var(--nav-hover);
+  color: var(--accent-strong);
+}
+
+/* This styles the icons inside the social link blocks */
+.social-link img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  flex: 0 0 22px;
+  display: block;
+}
+
+/* This keeps the social link text aligned neatly */
+.social-link span {
+  line-height: 1;
+}
+
+/* This styles simple bullet lists */
+.clean-list {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+/* This adds vertical spacing between list items */
+.clean-list li {
+  margin: 8px 0;
+}
+
+/* This styles a placeholder map box */
+.map-box {
+  min-height: 280px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  border-radius: 24px;
+  padding: 20px;
+  background: linear-gradient(135deg, #dff5f1, #eff7ff);
+  color: var(--accent-strong);
+  font-weight: 800;
+}
+
+/* This styles the campus information box */
+.campus-box {
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  border-radius: 24px;
+  padding: 28px;
+  background: linear-gradient(135deg, #dff5f1, #eff7ff);
+  border: 1px solid rgba(22, 50, 79, 0.08);
+  box-shadow: var(--shadow);
+}
+
+/* This styles the campus box heading */
+.campus-box h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
+
+/* This styles the campus box paragraph */
+.campus-box p {
+  margin: 0;
+  max-width: 42ch;
+  color: var(--muted);
+}
+
+/* This positions the campus box button neatly below the text */
+.campus-box .button {
+  margin-top: 6px;
+  align-self: flex-start;
+}
+
+/* This styles the footer area */
+.footer {
+  padding: 14px 0 36px;
+  color: var(--muted);
+}
+
+/* This adds spacing between footer paragraphs */
+.footer p {
+  margin: 6px 0;
+}
+
+/* This is a utility class that adds a small top margin */
+.top-gap-12 {
+  margin-top: 12px;
+}
+
+/* This media query adjusts large layouts for smaller laptop and tablet screens */
+@media (max-width: 1100px) {
+  /* These layouts collapse into one column */
+  .hero-grid,
+  .media-grid,
+  .featured-grid,
+  .cta-box,
+  .info-grid,
+  .interest-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* This aligns CTA content better when stacked */
+  .cta-box {
+    align-items: flex-start;
+  }
+
+  /* This gives the hero heading a little more width */
+  .hero-copy h1 {
+    max-width: 14ch;
+  }
+
+  /* This changes the hero image shape for narrower screens */
+  .hero-main-card img {
+    aspect-ratio: 16 / 10;
+  }
+
+  /* These floating badges become normal inline elements */
+  .floating-badge {
+    position: static;
+    display: inline-flex;
+    margin: 12px 8px 0 0;
+  }
+}
+
+/* This media query handles tablet and smaller screens */
+@media (max-width: 900px) {
+  /* This allows the nav to wrap nicely on smaller widths */
+  .nav {
+    flex-wrap: wrap;
+    min-height: auto;
+    padding: 16px 0;
+  }
+
+  /* This shows the mobile menu button */
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  /* This hides the nav links until the menu is opened */
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 10px;
+  }
+
+  /* This shows the menu links when JavaScript adds the open class */
+  .nav-links.is-open {
+    display: flex;
+  }
+
+  /* This styles mobile nav links as full-width buttons */
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.64);
+  }
+
+  /* This slightly reduces the logo size */
+  .brand-logo {
+    width: 58px;
+    height: 58px;
+  }
+
+  /* This slightly reduces the brand text size */
+  .brand-text {
+    font-size: 1.55rem;
+  }
+}
+
+/* This media query handles phone-sized screens */
+@media (max-width: 700px) {
+  /* This slightly tightens line spacing on mobile */
+  body {
+    line-height: 1.5;
+  }
+
+  /* This reduces the top padding above the main content */
+  main {
+    padding-top: 18px;
+  }
+
+  /* This reduces side spacing on smaller screens */
+  .container {
+    width: min(100% - 20px, 1200px);
+  }
+
+  /* This reduces padding and corner radius for hero and section blocks */
+  .hero,
+  .section {
+    padding: 22px 18px;
+    border-radius: 24px;
+  }
+
+  /* This scales the main hero heading for mobile */
+  .hero-copy h1 {
+    font-size: clamp(2.2rem, 12vw, 3.9rem);
+    max-width: 11ch;
+  }
+
+  /* This keeps body text readable on smaller screens */
+  .hero-copy p,
+  .section-heading p,
+  .media-copy p,
+  .cta-box p {
+    font-size: 1rem;
+  }
+
+  /* This makes buttons take full width on mobile */
+  .button,
+  .btn {
+    width: 100%;
+  }
+
+  /* This stacks grouped buttons vertically */
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  /* This slightly reduces the spacing between hero stats */
+  .hero-stats {
+    gap: 12px;
+  }
+
+  /* This makes stat blocks smaller on mobile */
+  .stat {
+    min-width: 100px;
+  }
+
+  /* This reduces the logo size again for smaller phones */
+  .brand-logo {
+    width: 52px;
+    height: 52px;
+  }
+
+  /* This reduces the brand text size for mobile */
+  .brand-text {
+    font-size: 1.35rem;
+  }
+
+  /* This makes the campus button stretch full width on mobile */
+  .campus-box .button {
+    width: 100%;
+    align-self: stretch;
+  }
+}

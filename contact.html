@@ -1,0 +1,364 @@
+<!-- This tells the browser that this file uses HTML5 -->
+<!DOCTYPE html>
+
+<!-- This is the main root of the whole page, and the page language is English -->
+<html lang="en">
+<head>
+  <!-- This sets the text encoding so letters and symbols display properly -->
+  <meta charset="UTF-8">
+
+  <!-- This helps the page scale correctly on phones, tablets and laptops -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- This is the page title shown in the browser tab -->
+  <title>Contact - Student Hub</title>
+
+  <!-- This connects early to Google Fonts to help the font load faster -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- This connects to the second Google Fonts server -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- This imports the Inter font in different font weights -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- This links the main CSS file for all the page styling -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- This links the JavaScript file, and defer means it runs after the HTML loads -->
+  <script src="script.js" defer></script>
+
+  <!-- This adds the small icon shown in the browser tab -->
+  <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
+</head>
+
+<!-- Everything inside body is the visible page content -->
+<body>
+  <!-- This is the top section of the page with the logo and menu -->
+  <header class="site-header">
+    <!-- This keeps the content centred and stops it stretching too wide -->
+    <div class="container">
+      <!-- This is the navigation bar -->
+      <nav class="nav">
+        <!-- This is the logo area, and it links back to the homepage -->
+        <a class="brand" href="index.html" aria-label="Student Hub home">
+          <!-- This is the logo image -->
+          <img class="brand-logo" src="images/student-hub-logo-header.png" alt="Student Hub logo">
+
+          <!-- This is the website name shown next to the logo -->
+          <span class="brand-text">Student Hub</span>
+        </a>
+
+        <!-- This is the mobile menu button -->
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <!-- First line of the burger menu icon -->
+          <span></span>
+
+          <!-- Second line of the burger menu icon -->
+          <span></span>
+
+          <!-- Third line of the burger menu icon -->
+          <span></span>
+        </button>
+
+        <!-- These are the navigation links -->
+        <div class="nav-links" id="site-nav">
+          <!-- Link to the homepage -->
+          <a href="index.html">Home</a>
+
+          <!-- Link to the clubs page -->
+          <a href="clubs.html">Clubs</a>
+
+          <!-- Link to the student deals page -->
+          <a href="student-deals.html">Student Deals</a>
+
+          <!-- Link to the contact page -->
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- This is the main content area of the page -->
+  <main class="container">
+    <!-- This is the hero section at the top of the contact page -->
+    <section class="hero">
+      <!-- This creates a layout with text on one side and an image on the other -->
+      <div class="hero-grid">
+        <!-- This is the text side of the hero section -->
+        <div class="hero-copy">
+          <!-- Small label above the main heading -->
+          <span class="eyebrow">Contact Student Hub</span>
+
+          <!-- Main heading of the page -->
+          <h1>Ask a question or register interest.</h1>
+
+          <!-- Short intro text explaining the page -->
+          <p>
+            Use this page to ask about clubs, request more information or send a general enquiry
+            about student activities and support.
+          </p>
+        </div>
+
+        <!-- This is the image shown on the right side -->
+        <div class="hero-card hero-main-card">
+          <!-- Main image for the contact page -->
+          <img src="images/contact-students.jpg" alt="Students speaking at a help desk">
+        </div>
+      </div>
+    </section>
+
+    <!-- This section splits into the contact form and official details -->
+    <section class="section split">
+      <!-- Left card with the enquiry form -->
+      <div class="card">
+        <div class="card-body">
+          <!-- Main heading for the form -->
+          <h2>Send an enquiry</h2>
+
+          <!-- This form sends the data to Formspree -->
+          <form
+            class="form"
+            id="contact-form"
+            action="https://formspree.io/f/mqenddlk"
+            method="POST"
+          >
+            <!-- Hidden field used for the email subject -->
+            <input type="hidden" name="subject" value="New Student Hub enquiry">
+
+            <!-- Field for the student's name -->
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required>
+            </div>
+
+            <!-- Field for the student's email -->
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="name@student.ac.uk" required>
+            </div>
+
+            <!-- Dropdown list so the student can choose a club -->
+            <div class="field">
+              <label for="club">Club</label>
+              <select id="club" name="club">
+                <option value="Art Club">Art Club</option>
+                <option value="Chess Club">Chess Club</option>
+                <option value="Cycling Club">Cycling Club</option>
+                <option value="Dance Club">Dance Club</option>
+                <option value="Debate Club">Debate Club</option>
+                <option value="Football Club">Football Club</option>
+                <option value="Gaming Club">Gaming Club</option>
+                <option value="LGBTQ+ Club">LGBTQ+ Club</option>
+                <option value="Yoga & Wellness Club">Yoga & Wellness Club</option>
+                <option value="General enquiry">General enquiry</option>
+              </select>
+            </div>
+
+            <!-- Field for the student's message -->
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" placeholder="Your message" required></textarea>
+            </div>
+
+            <!-- Submit button for the form -->
+            <button class="button" id="contact-submit" type="submit">Send enquiry</button>
+
+            <!-- This paragraph shows status messages like sending or error text -->
+            <p id="form-status" class="top-gap-12" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Right card with official contact details -->
+      <div class="card">
+        <div class="card-body">
+          <!-- Main heading for the contact details -->
+          <h2>Official contact details</h2>
+
+          <!-- Official website link -->
+          <p>
+            Website:
+            <a href="https://www.nclanarkshire.ac.uk" target="_blank" rel="noopener noreferrer">nclanarkshire.ac.uk</a>
+          </p>
+
+          <!-- Official contact page link -->
+          <p>
+            Contact page:
+            <a href="https://www.nclanarkshire.ac.uk/corporate/contact-us/" target="_blank" rel="noopener noreferrer">Contact us</a>
+          </p>
+
+          <!-- Students' Association link -->
+          <p>
+            Students’ Association:
+            <a href="https://www.nclanarkshire.ac.uk/for-applicants/student-support-and-resources/students-association/" target="_blank" rel="noopener noreferrer">View page</a>
+          </p>
+
+          <!-- College phone number -->
+          <p>
+            General enquiries:
+            <a href="tel:03005558080">0300 555 8080</a>
+          </p>
+
+          <!-- College email address -->
+          <p>
+            Email:
+            <a href="mailto:info@nclan.ac.uk">info@nclan.ac.uk</a>
+          </p>
+
+          <!-- Campus address -->
+          <p>Motherwell campus: 1 Enterprise Way, Motherwell, ML1 2TX.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- This section shows campus links and social media links -->
+    <section class="section split">
+      <!-- Left side with campus information -->
+      <div>
+        <!-- Small label above the heading -->
+        <span class="eyebrow">Find your way</span>
+
+        <!-- Section heading -->
+        <h2>Campuses</h2>
+
+        <!-- Short text about campus information -->
+        <p>
+          Explore New College Lanarkshire campuses and find the location that suits you best.
+        </p>
+
+        <!-- Small box with a campus link -->
+        <div class="campus-box">
+          <!-- Small heading inside the box -->
+          <h3>Find a campus</h3>
+
+          <!-- Short explanation text -->
+          <p>
+            View all college locations, addresses and travel information on the official website.
+          </p>
+
+          <!-- External link to the campuses page -->
+          <a
+            class="button"
+            href="https://www.nclanarkshire.ac.uk/locations-and-facilities/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View campuses
+          </a>
+        </div>
+      </div>
+
+      <!-- Right side with social media links -->
+      <div>
+        <!-- Small label above the heading -->
+        <span class="eyebrow">Stay connected</span>
+
+        <!-- Section heading -->
+        <h2>Social media</h2>
+
+        <!-- Short text for the social media block -->
+        <p>Follow for updates, events and student news.</p>
+
+        <!-- This holds the social media links -->
+        <div class="social-links">
+          <!-- Instagram link -->
+          <a class="social-link" href="https://www.instagram.com/nclanarkshire/" target="_blank" rel="noopener noreferrer">
+            <img src="icons/instagram.svg" alt="Instagram icon">
+            <span>Instagram</span>
+          </a>
+
+          <!-- Facebook link -->
+          <a class="social-link" href="https://www.facebook.com/NCLanarkshire/" target="_blank" rel="noopener noreferrer">
+            <img src="icons/facebook.svg" alt="Facebook icon">
+            <span>Facebook</span>
+          </a>
+
+          <!-- X link -->
+          <a class="social-link" href="https://x.com/NCLanarkshire" target="_blank" rel="noopener noreferrer">
+            <img src="icons/x.svg" alt="X icon">
+            <span>X</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- This is the footer at the bottom of the page -->
+  <footer class="footer">
+    <!-- Container keeps the footer content aligned with the rest of the page -->
+    <div class="container">
+      <!-- Short footer text about the website -->
+      <p>Student Hub — a modern college clubs website concept.</p>
+
+      <!-- Copyright text -->
+      <p>&copy; 2026 Student Hub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- This script handles the form submission -->
+  <script>
+    // This gets the form from the page
+    const contactForm = document.getElementById("contact-form");
+
+    // This gets the submit button
+    const submitButton = document.getElementById("contact-submit");
+
+    // This gets the area where form messages will appear
+    const formStatus = document.getElementById("form-status");
+
+    // This checks that the form exists before running the code
+    if (contactForm) {
+      // This listens for the form being submitted
+      contactForm.addEventListener("submit", async (event) => {
+        // This stops the normal page refresh
+        event.preventDefault();
+
+        // This disables the button while the form is sending
+        submitButton.disabled = true;
+
+        // This changes the button text while sending
+        submitButton.textContent = "Sending...";
+
+        // This shows a sending message to the user
+        formStatus.textContent = "Sending your enquiry...";
+
+        try {
+          // This sends the form data to Formspree
+          const response = await fetch(contactForm.action, {
+            method: "POST",
+            body: new FormData(contactForm),
+            headers: {
+              "Accept": "application/json"
+            }
+          });
+
+          // If the form sends successfully, the user is taken to the thank-you page
+          if (response.ok) {
+            window.location.href = "thank-you.html";
+            return;
+          }
+
+          // This shows an error if the form could not be sent
+          formStatus.textContent = "Sorry, your enquiry could not be sent. Please try again.";
+        } catch (error) {
+          // This also shows an error if something goes wrong
+          formStatus.textContent = "Sorry, your enquiry could not be sent. Please try again.";
+        }
+
+        // This turns the button back on after an error
+        submitButton.disabled = false;
+
+        // This changes the button text back to normal
+        submitButton.textContent = "Send enquiry";
+      });
+    }
+  </script>
+</body>
+</html>

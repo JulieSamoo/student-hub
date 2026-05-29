@@ -1,0 +1,427 @@
+<!-- This tells the browser that this file uses HTML5 -->
+<!DOCTYPE html>
+
+<!-- This is the main root of the whole page, and the page language is English -->
+<html lang="en">
+<head>
+  <!-- This sets the text encoding so letters and symbols display properly -->
+  <meta charset="UTF-8">
+
+  <!-- This helps the page scale correctly on phones, tablets and laptops -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- This is the page title shown in the browser tab -->
+  <title>Clubs - Student Hub</title>
+
+  <!-- This connects early to Google Fonts to help the font load faster -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- This connects to the second Google Fonts server -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- This imports the Inter font in different font weights -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- This links the main CSS file for all the page styling -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- This links the JavaScript file, and defer means it runs after the HTML loads -->
+  <script src="script.js" defer></script>
+
+  <!-- This adds the small icon shown in the browser tab -->
+  <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
+</head>
+
+<!-- Everything inside body is the visible page content -->
+<body>
+  <!-- This is the top section of the page with the logo and menu -->
+  <header class="site-header">
+    <!-- This keeps the content centred and stops it stretching too wide -->
+    <div class="container">
+      <!-- This is the navigation bar -->
+      <nav class="nav">
+        <!-- This is the logo area, and it links back to the homepage -->
+        <a class="brand" href="index.html" aria-label="Student Hub home">
+          <!-- This is the logo image -->
+          <img class="brand-logo" src="images/student-hub-logo-header.png" alt="Student Hub logo">
+
+          <!-- This is the website name shown next to the logo -->
+          <span class="brand-text">Student Hub</span>
+        </a>
+
+        <!-- This is the mobile menu button -->
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <!-- First line of the burger menu icon -->
+          <span></span>
+
+          <!-- Second line of the burger menu icon -->
+          <span></span>
+
+          <!-- Third line of the burger menu icon -->
+          <span></span>
+        </button>
+
+        <!-- These are the navigation links -->
+        <div class="nav-links" id="site-nav">
+          <!-- Link to the homepage -->
+          <a href="index.html">Home</a>
+
+          <!-- Link to the clubs page -->
+          <a href="clubs.html">Clubs</a>
+
+          <!-- Link to the student deals page -->
+          <a href="student-deals.html">Student Deals</a>
+
+          <!-- Link to the contact page -->
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- This is the main content area of the page -->
+  <main class="container">
+    <!-- This is the hero section at the top of the clubs page -->
+    <section class="hero">
+      <!-- This creates a layout with text on one side and an image on the other -->
+      <div class="hero-grid">
+        <!-- This is the text side of the hero section -->
+        <div class="hero-copy">
+          <!-- Small label above the main heading -->
+          <span class="eyebrow">All clubs</span>
+
+          <!-- Main heading of the clubs page -->
+          <h1>Browse the full list of student clubs.</h1>
+
+          <!-- Short intro text explaining the page -->
+          <p>
+            Explore creative, social, active and wellbeing-focused clubs across Student Hub.
+            Open any club page to see more information and decide what suits you best.
+          </p>
+
+          <!-- These are the main action buttons in the hero section -->
+          <div class="hero-actions">
+            <!-- Button that takes the user to the contact page -->
+            <a class="button" href="contact.html">Ask about a club</a>
+
+            <!-- Button that takes the user to the student deals page -->
+            <a class="button button-secondary" href="student-deals.html">View Student Deals</a>
+          </div>
+        </div>
+
+        <!-- This is the hero image shown on the right side -->
+        <div class="hero-card hero-main-card">
+          <!-- Main image for the clubs page -->
+          <img src="images/clubs-hero.jpg" alt="Students exploring club activities">
+        </div>
+      </div>
+    </section>
+
+    <!-- This section shows the full club directory -->
+    <section class="section">
+      <!-- Heading area for the section -->
+      <div class="section-heading">
+        <!-- Small label above the heading -->
+        <span class="eyebrow">Club directory</span>
+
+        <!-- Main heading for this section -->
+        <h2>Choose your interest</h2>
+
+        <!-- Short text explaining what to do here -->
+        <p>
+          Compare activities, communities and club styles in one place, then open a page for more details.
+        </p>
+      </div>
+
+      <!-- This grid holds all the club cards -->
+      <div class="grid">
+        <!-- Art Club card -->
+        <article class="card">
+          <!-- Image area for the card -->
+          <div class="card-media">
+            <!-- Club image -->
+            <img src="images/art-club.jpg" alt="Art Club">
+          </div>
+
+          <!-- Text content for the card -->
+          <div class="card-body">
+            <!-- Club category tag -->
+            <span class="club-tag">Creative</span>
+
+            <!-- Club name -->
+            <h3>Art Club</h3>
+
+            <!-- Short club description -->
+            <p>A creative space for drawing, painting, experimentation and student-led art projects.</p>
+
+            <!-- Button linking to the full club page -->
+            <a class="button top-gap-12" href="art-club.html">View details</a>
+          </div>
+        </article>
+
+        <!-- Chess Club card -->
+        <article class="card">
+          <!-- Image area for the card -->
+          <div class="card-media">
+            <!-- Club image -->
+            <img src="images/chess-club.jpg" alt="Chess Club">
+          </div>
+
+          <!-- Text content for the card -->
+          <div class="card-body">
+            <!-- Club category tag -->
+            <span class="club-tag">Strategy</span>
+
+            <!-- Club name -->
+            <h3>Chess Club</h3>
+
+            <!-- Short club description -->
+            <p>A calm and social club focused on strategy, problem-solving and friendly competition.</p>
+
+            <!-- Button linking to the full club page -->
+            <a class="button top-gap-12" href="chess-club.html">View details</a>
+          </div>
+        </article>
+
+        <!-- Cycling Club card -->
+        <article class="card">
+          <!-- Image area for the card -->
+          <div class="card-media">
+            <!-- Club image -->
+            <img src="images/cycling-club.jpg" alt="Cycling Club">
+          </div>
+
+          <!-- Text content for the card -->
+          <div class="card-body">
+            <!-- Club category tag -->
+            <span class="club-tag">Active</span>
+
+            <!-- Club name -->
+            <h3>Cycling Club</h3>
+
+            <!-- Short club description -->
+            <p>An outdoor club for group rides, fitness, fresh air and social activity beyond class.</p>
+
+            <!-- Button linking to the full club page -->
+            <a class="button top-gap-12" href="cycling-club.html">View details</a>
+          </div>
+        </article>
+
+        <!-- Dance Club card -->
+        <article class="card">
+          <!-- Image area for the card -->
+          <div class="card-media">
+            <!-- Club image -->
+            <img src="images/dance-club.jpg" alt="Dance Club">
+          </div>
+
+          <!-- Text content for the card -->
+          <div class="card-body">
+            <!-- Club category tag -->
+            <span class="club-tag">Performance</span>
+
+            <!-- Club name -->
+            <h3>Dance Club</h3>
+
+            <!-- Short club description -->
+            <p>An energetic club where students learn routines, build confidence and perform together.</p>
+
+            <!-- Button linking to the full club page -->
+            <a class="button top-gap-12" href="dance-club.html">View details</a>
+          </div>
+        </article>
+
+        <!-- Debate Club card -->
+        <article class="card">
+          <!-- Image area for the card -->
+          <div class="card-media">
+            <!-- Club image -->
+            <img src="images/debate-club.jpg" alt="Debate Club">
+          </div>
+
+          <!-- Text content for the card -->
+          <div class="card-body">
+            <!-- Club category tag -->
+            <span class="club-tag">Communication</span>
+
+            <!-- Club name -->
+            <h3>Debate Club</h3>
+
+            <!-- Short club description -->
+            <p>A speaking-focused club that helps students develop arguments and discussion skills.</p>
+
+            <!-- Button linking to the full club page -->
+            <a class="button top-gap-12" href="debate-club.html">View details</a>
+          </div>
+        </article>
+
+        <!-- Football Club card -->
+        <article class="card">
+          <!-- Image area for the card -->
+          <div class="card-media">
+            <!-- Club image -->
+            <img src="images/football-club.jpg" alt="Football Club">
+          </div>
+
+          <!-- Text content for the card -->
+          <div class="card-body">
+            <!-- Club category tag -->
+            <span class="club-tag">Sport</span>
+
+            <!-- Club name -->
+            <h3>Football Club</h3>
+
+            <!-- Short club description -->
+            <p>A team-based sports club centred on training, matches, fitness and shared goals.</p>
+
+            <!-- Button linking to the full club page -->
+            <a class="button top-gap-12" href="football-club.html">View details</a>
+          </div>
+        </article>
+
+        <!-- Gaming Club card -->
+        <article class="card">
+          <!-- Image area for the card -->
+          <div class="card-media">
+            <!-- Club image -->
+            <img src="images/gaming-club.jpg" alt="Gaming Club">
+          </div>
+
+          <!-- Text content for the card -->
+          <div class="card-body">
+            <!-- Club category tag -->
+            <span class="club-tag">Social + Esports</span>
+
+            <!-- Club name -->
+            <h3>Gaming Club</h3>
+
+            <!-- Short club description -->
+            <p>A social and competitive space for esports, multiplayer sessions and tournaments.</p>
+
+            <!-- Button linking to the full club page -->
+            <a class="button top-gap-12" href="gaming-club.html">View details</a>
+          </div>
+        </article>
+
+        <!-- LGBTQ+ Club card -->
+        <article class="card">
+          <!-- Image area for the card -->
+          <div class="card-media">
+            <!-- Club image -->
+            <img src="images/lgbtq-club.jpg" alt="LGBTQ+ Club">
+          </div>
+
+          <!-- Text content for the card -->
+          <div class="card-body">
+            <!-- Club category tag -->
+            <span class="club-tag">Community</span>
+
+            <!-- Club name -->
+            <h3>LGBTQ+ Club</h3>
+
+            <!-- Short club description -->
+            <p>A welcoming space for support, connection, inclusion and student-led awareness activity.</p>
+
+            <!-- Button linking to the full club page -->
+            <a class="button top-gap-12" href="lgbtq-club.html">View details</a>
+          </div>
+        </article>
+
+        <!-- Yoga and Wellness Club card -->
+        <article class="card">
+          <!-- Image area for the card -->
+          <div class="card-media">
+            <!-- Club image -->
+            <img src="images/yoga-wellness-club.jpg" alt="Yoga and Wellness Club">
+          </div>
+
+          <!-- Text content for the card -->
+          <div class="card-body">
+            <!-- Club category tag -->
+            <span class="club-tag">Wellbeing</span>
+
+            <!-- Club name -->
+            <h3>Yoga &amp; Wellness Club</h3>
+
+            <!-- Short club description -->
+            <p>A calm wellbeing space focused on mindfulness, stretching, balance and healthy routines.</p>
+
+            <!-- Button linking to the full club page -->
+            <a class="button top-gap-12" href="yoga-wellness-club.html">View details</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- This section helps students if they are not sure what to choose -->
+    <section class="section split">
+      <!-- First support card -->
+      <div class="card">
+        <div class="card-body">
+          <!-- Small label above the heading -->
+          <span class="eyebrow">Need help choosing?</span>
+
+          <!-- Main heading -->
+          <h2>Find the right fit</h2>
+
+          <!-- First paragraph of advice -->
+          <p>
+            Think about what matters most to you: creativity, fitness, confidence, friendship,
+            competition or wellbeing.
+          </p>
+
+          <!-- Second paragraph of advice -->
+          <p>
+            If you are unsure where to begin, use the contact page to ask questions before joining.
+          </p>
+
+          <!-- Button linking to the contact page -->
+          <a class="button top-gap-12" href="contact.html">Go to contact page</a>
+        </div>
+      </div>
+
+      <!-- Second support card -->
+      <div class="card">
+        <div class="card-body">
+          <!-- Small label above the heading -->
+          <span class="eyebrow">Useful extras</span>
+
+          <!-- Main heading -->
+          <h2>Explore student deals</h2>
+
+          <!-- First paragraph of explanation -->
+          <p>
+            Looking for practical discounts, travel tools and useful student services in Scotland and the UK?
+          </p>
+
+          <!-- Second paragraph of explanation -->
+          <p>
+            Visit the Student Deals page for links that support student life alongside clubs and activities.
+          </p>
+
+          <!-- Button linking to the student deals page -->
+          <a class="button button-secondary top-gap-12" href="student-deals.html">Go to Student Deals</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- This is the footer at the bottom of the page -->
+  <footer class="footer">
+    <!-- Container keeps the footer content aligned with the rest of the page -->
+    <div class="container">
+      <!-- Short footer text about the website -->
+      <p>Student Hub — a modern college clubs website concept.</p>
+
+      <!-- Copyright text -->
+      <p>&copy; 2026 Student Hub. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
